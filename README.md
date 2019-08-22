@@ -23,7 +23,7 @@ Dentro del directorio `/domain` esta el dominio de nuestra aplicacion, ahi estan
  1. Ejecutar `sh entrypoint.sh install`
  2. Ejecutar `sh entrypoint.sh run {elementos separados por coma} {estrategia: sorting-asc | sorting-desc}`
 
-**Sin Docker porque estoy en Windows:**
+**Sin Docker porque no se lo que es, y ademas estoy en Windows:**
  1. Copiar todo lo que esta en el directorio /app a algun directorio de tu sistema local (como por ejemplo /Desacargas)
  2. Ejecutar `python main.py {elementos separados por coma} {estrategia: sorting-asc | sorting-desc}`
 
