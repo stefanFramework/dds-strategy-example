@@ -19,11 +19,32 @@ Dentro del directorio `/domain` esta el dominio de nuestra aplicacion, ahi estan
 
 ### Instalacion y Ejecución
 
-**Usando Docker, DockerCompose y Docker 4 Mac o Docker VM:**
+La aplicacion esta Dockerizada. Para los que no saben que es Docker, pero les interesaria saber, dejo información abajo:
+
+- [Que es Docker?](https://docs.docker.com/engine/docker-overview/)
+- [Docker para Windows](https://docs.docker.com/docker-for-windows/)
+- [Docker para Mac](https://docs.docker.com/docker-for-mac/)
+- [Docker para Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+**Usando Docker, DockerCompose y Docker 4 Mac/Docker VM:**
+
+Para facilitar la implementacion de la app, se encapsulo todo en un script llamado `entrypoint.sh`.  
+Tanto instalación y la ejecución se realizan a través de una llamada a este script.  
+
+Los comandos disponibles son: 
+
+- `install`: Genera el **docker-compose.yml** a partir de un template de ejemplo (incluido en el directorio del proyecto) y realiza el buildeo de la imagen.  No toma parametros. 
+- `run`: Realiza la ejecución de la aplicacion. Toma 2 parametros: una lista de valores numericos separados por `,` y el criterio de ordenamiento que puede ser **sorting-asc** o **sorting-desc**
+
+Como ejecutar la aplicacion:
+
  1. Ejecutar `sh entrypoint.sh install`
  2. Ejecutar `sh entrypoint.sh run {elementos separados por coma} {estrategia: sorting-asc | sorting-desc}`
 
-**Sin Docker porque no se lo que es, y ademas estoy en Windows:**
+**Si no me interesa aprender Docker, como puedo correr la aplicación?:**
+
+Para poder ejecutar la app en un entorno local "clasico" es necesario que tengan python Version 2.7.x o superior instalado
+
  1. Copiar todo lo que esta en el directorio /app a algun directorio de tu sistema local (como por ejemplo /Desacargas)
  2. Ejecutar `python main.py {elementos separados por coma} {estrategia: sorting-asc | sorting-desc}`
 
